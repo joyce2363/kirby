@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Inhaler",
+  "version": "0.1.0",
+  "description": "A Kirby-inspired tab vacuum for Chrome.",
+  "permissions": ["tabs"],
+  "action": {
+    "default_title": "Tab Inhaler",
+    "default_popup": "popup.html"
+  }
+}

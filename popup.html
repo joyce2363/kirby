@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Inhaler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <header>
+        <h1>Tab Inhaler</h1>
+        <p class="sub">Click a tab to feed it. Click the puffball to inhale them all.</p>
+      </header>
+
+      <div class="browser">
+        <div class="chrome-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="bar-label">your browser</span>
+          <span class="tab-count" id="count">0 tabs</span>
+        </div>
+        <div class="tabs" id="tabs"></div>
+      </div>
+
+      <div class="controls">
+        <button class="act primary" id="inhaleAll">Inhale all</button>
+        <button class="act ghost" id="newTab">New tab</button>
+        <button class="act ghost" id="refresh">Refresh</button>
+      </div>
+
+      <div class="puff-wrap">
+        <div class="puff" id="puff" title="Click me to inhale everything">
+          <div class="arm l"></div><div class="arm r"></div>
+          <div class="foot l"></div><div class="foot r"></div>
+          <div class="body"></div>
+          <div class="ring"></div>
+          <div class="face">
+            <div class="eye l"></div><div class="eye r"></div>
+            <div class="cheek l"></div><div class="cheek r"></div>
+            <div class="mouth" id="mouth"></div>
+          </div>
+        </div>
+        <div class="tummy">Tabs eaten: <b id="eaten">0</b></div>
+        <div class="hint" id="hint">a tidy browser is a happy browser</div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
