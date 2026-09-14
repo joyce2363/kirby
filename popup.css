@@ -77,7 +77,18 @@ h1 {
   display: flex; flex-direction: column; gap: 8px;
   padding: 12px;
   min-height: 120px;
+  max-height: 220px;
+  overflow-y: auto;
+  align-content: flex-start;
 }
+
+.tabs::-webkit-scrollbar { width: 8px; }
+.tabs::-webkit-scrollbar-thumb {
+  background: var(--puff-shade);
+  border: 2px solid #fff;
+  border-radius: 999px;
+}
+.tabs::-webkit-scrollbar-track { background: #fff8fb; }
 
 .tab {
   display: flex; align-items: center; gap: 8px;

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="body" cx="36%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#ffe0ee"/>
+      <stop offset="0.46" stop-color="#ffc0dc"/>
+      <stop offset="1" stop-color="#ff92c1"/>
+    </radialGradient>
+    <radialGradient id="arm" cx="40%" cy="35%" r="72%">
+      <stop offset="0" stop-color="#ffc0dc"/>
+      <stop offset="1" stop-color="#ff92c1"/>
+    </radialGradient>
+    <radialGradient id="foot" cx="40%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#e8586a"/>
+      <stop offset="1" stop-color="#cf4457"/>
+    </radialGradient>
+    <linearGradient id="eye" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="42%" stop-color="#20203c"/>
+      <stop offset="42%" stop-color="#3f63d4"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="19" cy="76" rx="15" ry="15" fill="url(#arm)" transform="rotate(-18 19 76)"/>
+  <ellipse cx="109" cy="76" rx="15" ry="15" fill="url(#arm)" transform="rotate(18 109 76)"/>
+  <ellipse cx="64" cy="62" rx="58" ry="58" fill="url(#body)"/>
+  <ellipse cx="43" cy="109" rx="21" ry="12" fill="url(#foot)" transform="rotate(-8 43 109)"/>
+  <ellipse cx="85" cy="109" rx="21" ry="12" fill="url(#foot)" transform="rotate(8 85 109)"/>
+
+  <ellipse cx="51" cy="50" rx="7.3" ry="14.5" fill="url(#eye)"/>
+  <ellipse cx="77" cy="50" rx="7.3" ry="14.5" fill="url(#eye)"/>
+  <ellipse cx="49.5" cy="46.5" rx="2.5" ry="4.4" fill="#fff"/>
+  <ellipse cx="75.5" cy="46.5" rx="2.5" ry="4.4" fill="#fff"/>
+  <ellipse cx="38.5" cy="61.5" rx="8" ry="4.7" fill="#ff7fb0" opacity="0.8"/>
+  <ellipse cx="89.5" cy="61.5" rx="8" ry="4.7" fill="#ff7fb0" opacity="0.8"/>
+  <ellipse cx="64" cy="73" rx="5.8" ry="3.3" fill="#7a1f3a"/>
+</svg>

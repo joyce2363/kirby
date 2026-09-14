@@ -92,12 +92,13 @@ function inhaleOneTab(card, tabId, opts = {}) {
 
     chrome.tabs.remove(tabId);
 
-    if (!opts.batch && tabsEl.querySelectorAll('.tab').length === 0) {
+    if (!opts.batch) {
       puff.classList.remove('inhaling');
-      setHint('no tabs. inbox-zero but for chaos.');
+      if (tabsEl.querySelectorAll('.tab').length === 0) {
+        setHint('no tabs. inbox-zero but for chaos.');
+      }
+      busy = false;
     }
-
-    if (!opts.batch) busy = false;
   };
 
   card.addEventListener('transitionend', done);
@@ -153,10 +154,8 @@ document.getElementById('inhaleAll').addEventListener('click', inhaleAllTabs);
 puff.addEventListener('click', inhaleAllTabs);
 
 document.getElementById('newTab').addEventListener('click', () => {
-  chrome.tabs.create({ active: true });
+  chrome.tabs.create({ active: false });
 });
-
-document.getElementById('refresh').addEventListener('click', refreshTabs);
 
 const closeTarget = (id) => {
   if (id === undefined) return;
@@ -164,6 +163,10 @@ const closeTarget = (id) => {
 };
 
 chrome.tabs.onRemoved.addListener(() => {
+  refreshTabs();
+});
+
+chrome.tabs.onCreated.addListener(() => {
   refreshTabs();
 });
 

@@ -1,11 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Tab Inhaler",
+  "name": "Tab Snack",
   "version": "0.1.0",
   "description": "A Kirby-inspired tab vacuum for Chrome.",
   "permissions": ["tabs"],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
   "action": {
-    "default_title": "Tab Inhaler",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "Tab Snack",
     "default_popup": "popup.html"
   }
 }
